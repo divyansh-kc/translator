@@ -6,7 +6,7 @@ print "Content-type: text/html\n\n";
 use CGI ':standard';
 
 my $input_string = param('input_string');
-my $ret = `python /home/divyansh/Desktop/test.py "$input_string"`;
+my $ret = `python /home/divyansh/Desktop/translate.py "$input_string"`;
 
 #print $input_string;
 print $ret;

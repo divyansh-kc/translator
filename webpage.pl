@@ -1,9 +1,12 @@
 #!/usr/bin/perl
 
 use strict;
+use HTML::Template;
+my $template = HTML::Template->new(filename => 'template.tmpl');
 
-print "Content-type: text/html\n\n";
+print "Content-type: text/html\n\n", $template->output;
 
+=pod
 print <<END_HTML;
 <html>
   <head>
@@ -46,3 +49,4 @@ print <<END_HTML;
 	</body>
 </html>
 END_HTML
+=cut
